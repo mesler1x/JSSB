@@ -1,4 +1,4 @@
-package ru.yandex.femidabackend;
+package edu.jssb;
 
 
 public class Task1 {
