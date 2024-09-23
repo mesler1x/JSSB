@@ -10,7 +10,7 @@ public enum Variants {
 
     public static Variants injectRandom() {
         Random random = new Random();
-        int difficultyIndex = random.nextInt(Variants.values().length - 1);
+        int difficultyIndex = random.nextInt(Variants.values().length);
         return Variants.values()[difficultyIndex];
     }
 }
