@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacts App</title>
+</head>
+<body>
+<h1>Contacts</h1>
+
+<form th:action="@{/api/contacts/add}" method="GET">
+    <button type="submit">Add New Contact</button>
+</form>
+
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="contact : ${contacts}">
+        <td th:text="${contact.id}"></td>
+        <td th:text="${contact.firstName}"></td>
+        <td th:text="${contact.secondName}"></td>
+        <td th:text="${contact.email}"></td>
+        <td th:text="${contact.phoneNumber}"></td>
+        <td>
+            <form th:action="@{/api/contacts/update/{id}(id=${contact.id})}" method="GET">
+                <button type="submit">Edit</button>
+            </form>
+            <form th:action="@{/api/contacts/delete(id=${contact.id})}" method="POST">
+                <button type="submit">Delete</button>
+            </form>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

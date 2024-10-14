@@ -1,0 +1,31 @@
+version: "3.9"
+services:
+  contacts:
+    container_name: contacts
+    build:
+      dockerfile: Dockerfile
+    hostname: contacts
+    ports:
+      - "8080:8080"
+    networks:
+      - mod3-network
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: "postgres"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "postgres"
+    hostname: contacts_postgres
+    volumes:
+      - ./database-scripts/init:/docker-entrypoint-initdb.d
+    ports:
+      - "6432:5432"
+    networks:
+      - mod3-network
+
+networks:
+  mod3-network:
+    driver: bridge

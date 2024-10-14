@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Form</title>
+</head>
+<body>
+<h1 th:if="${contact != null}">Update Contact</h1>
+<h1 th:unless="${contact != null}">Add New Contact</h1>
+
+<form th:if="${contact != null}"
+      th:action="@{/api/contacts/update}" method="POST" th:object="${contact}">
+    <input type="hidden" th:field="*{id}"/>
+    <label for="firstName">FirstName:</label>
+    <input type="text" id="firstName1" th:field="*{firstName}"><br>
+
+    <label for="secondName">SecondName:</label>
+    <input type="text" id="secondName1" th:field="*{secondName}"><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email1" th:field="*{email}"><br>
+
+    <label for="phone">Phone:</label>
+    <input type="text" id="phone1" th:field="*{phoneNumber}"><br>
+    <input type="submit" th:if="${contact != null}" value="Update">
+</form>
+
+<form th:unless="${contact != null}"
+      th:action="@{/api/contacts/add}" method="POST" th:object="${contactDTO}">
+    <label for="firstName">FirstName:</label>
+    <input type="text" id="firstName" th:field="*{firstName}"><br>
+
+    <label for="secondName">SecondName:</label>
+    <input type="text" id="secondName" th:field="*{secondName}"><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" th:field="*{email}"><br>
+
+    <label for="phone">Phone:</label>
+    <input type="text" id="phone" th:field="*{phoneNumber}"><br>
+
+
+    <input type="submit" th:unless="${contact != null}" value="Add">
+</form>
+</body>
+</html>
