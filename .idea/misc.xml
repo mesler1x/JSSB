@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/skillbox/mod4_skillbox" />
+  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
@@ -9,6 +12,11 @@
         <option value="$PROJECT_DIR$/base/mod2/pom.xml" />
         <option value="$PROJECT_DIR$/skillbox/mod1/pom.xml" />
         <option value="$PROJECT_DIR$/mod2_skillbox/pom.xml" />
+        <option value="$PROJECT_DIR$/mod3_skillbox/pom.xml" />
+        <option value="$PROJECT_DIR$/skillbox/mod2_skillbox/pom.xml" />
+        <option value="$PROJECT_DIR$/skillbox/mod3_skillbox/pom.xml" />
+        <option value="$PROJECT_DIR$/mod4_skillbox/pom.xml" />
+        <option value="$PROJECT_DIR$/skillbox/mod4_skillbox/pom.xml" />
       </list>
     </option>
   </component>

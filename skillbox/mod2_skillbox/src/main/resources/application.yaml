@@ -1,0 +1,13 @@
+server:
+  port: 2004
+spring:
+  application:
+    name: mod2_skillbox
+  shell:
+    interactive:
+      enabled: true
+  profiles:
+    active: ${PROFILE:default}
+
+init-file:
+  path: ${FILE_PATH:mod2_skillbox/src/main/resources/init.txt}
