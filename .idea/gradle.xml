@@ -6,6 +6,14 @@
       <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/mod3_skillbox" />
       </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/mod5_skillbox" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/mod5_skillbox" />
+          </set>
+        </option>
+      </GradleProjectSettings>
     </option>
   </component>
 </project>

@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/JSSB.iml" filepath="$PROJECT_DIR$/.idea/JSSB.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mod5_skillbox.main.iml" filepath="$PROJECT_DIR$/.idea/modules/mod5_skillbox.main.iml" />
     </modules>
   </component>
 </project>
